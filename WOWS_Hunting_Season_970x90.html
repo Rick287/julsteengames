@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- saved from url=(0173)https://tpc.googlesyndication.com/sadbundle/$csp%3Der3$/9169563720269075254/WOWS_Hunting_Season_970x90.html#t=2235463209674384276&p=https%3A%2F%2Fgoogleads.g.doubleclick.net -->
+<html class="wf-webfont-n4-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=970,height=90" name="ad.size"><meta content="Adobe_Animate_CC" name="authoring-tool"><title>WOWS_Hunting_Season_970x90</title><script src="./tweenmax_1.18.0_499ba64a23378545748ff12d372e59e9_min.js"></script><script src="./createjs_2015.11.26_54e1c3722102182bb133912ad4442e19_min.js"></script><script src="./exitapi-impl.js" type="text/javascript"></script><script src="./addata.js" type="text/javascript"></script><script src="./WOWS_Hunting_Season_970x90.js"></script><script src="./localization.js"></script><script src="./WebFont.js"></script><script>
+var canvas, stage, exportRoot, canReplay = true, replayCounter = 0;
+
+// >>>>> banner txt + helpLine
+
+	var helpLinesAlpha = 0;
+	var debugMode = 0;
+	
+	var t1_t = EN_v[0];	var t1_f = "22px";	var t1_lineH = 30;	var t1_lineW = 300; var t1_offX = 0;	var t1_offY = 28;
+
+	var t2_t = EN_v[1];	var t2_f = "22px";	var t2_lineH = 30;	var t2_lineW = 400; var t2_offX = 0;	var t2_offY = 28;
+
+	var t3_t = EN_v[2];	var t3_f = "22px";	var t3_lineH = 30;	var t3_lineW = 400; var t3_offX = 0;	var t3_offY = 28;
+	
+	var btn_t = EN_h[3];	var btn_f = "17px";	var btn_lineH = 27;	var btn_lineW = 300; var btn_offX = 0;	var btn_offY = 20;
+
+	var rep_t = EN_h[4];	var rep_f = "14px";	var rep_lineH = 27;	var rep_lineW = 400; var rep_offX = 0;	var rep_offY = 27;
+
+function start() {
+	canvas = document.getElementById("canvas");
+	images = images||{};
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", handleFileLoad);
+	loader.addEventListener("complete", handleComplete);
+	loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt) {	
+	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }	
+}
+function handleComplete(evt) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var queue = evt.target;
+	var ssMetadata = lib.ssMetadata;
+	for(i=0; i<ssMetadata.length; i++) {
+		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+	}
+	exportRoot = new lib.WOWS_Hunting_Season_970x90();
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.enableMouseOver();	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		createjs.Ticker.setFPS(lib.properties.fps);
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    	
+	fnStartAnimation();
+}
+</script><style type="text/css">/* cyrillic-ext */
+@font-face {
+  font-family: 'webFont';
+  font-style: normal;
+  font-weight: 700;
+  src:  url(https://fonts.gstatic.com/s/robotocondensed/v13/b9QBgL0iMZfDSpmcXcE8nBYyuMfI6pbvLqniwcbLofP2Ot9t5h1GRSTIE78Whtoh.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'webFont';
+  font-style: normal;
+  font-weight: 700;
+  src:  url(https://fonts.gstatic.com/s/robotocondensed/v13/b9QBgL0iMZfDSpmcXcE8nIT75Viso9fCesWUO0IzDUX2Ot9t5h1GRSTIE78Whtoh.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'webFont';
+  font-style: normal;
+  font-weight: 700;
+  src:  url(https://fonts.gstatic.com/s/robotocondensed/v13/b9QBgL0iMZfDSpmcXcE8nL8EBb1YR1F8PhofwHtObrz2Ot9t5h1GRSTIE78Whtoh.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'webFont';
+  font-style: normal;
+  font-weight: 700;
+  src:  url(https://fonts.gstatic.com/s/robotocondensed/v13/b9QBgL0iMZfDSpmcXcE8nAro84VToOve-uw23YSmBS72Ot9t5h1GRSTIE78Whtoh.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'webFont';
+  font-style: normal;
+  font-weight: 700;
+  src:  url(https://fonts.gstatic.com/s/robotocondensed/v13/b9QBgL0iMZfDSpmcXcE8nACS0ZgDg4kY8EFPTGlvyHP2Ot9t5h1GRSTIE78Whtoh.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'webFont';
+  font-style: normal;
+  font-weight: 700;
+  src:  url(https://fonts.gstatic.com/s/robotocondensed/v13/b9QBgL0iMZfDSpmcXcE8nGPMCwzADhgEiQ8LZ-01G1L2Ot9t5h1GRSTIE78Whtoh.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'webFont';
+  font-style: normal;
+  font-weight: 700;
+  src:  url(https://fonts.gstatic.com/s/robotocondensed/v13/b9QBgL0iMZfDSpmcXcE8nPX2or14QGUHgbhSBV1Go0E.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+</style><script type="text/javascript" src="./Y2DbBjy0slmABvYkhpk68Z5hMq5vfvhMsQReFHTc4eM.js"></script></head><body id="docBody" onload="loadFonts();" style="cursor: default; margin: 0px; overflow: hidden;">
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	<canvas height="90" id="canvas" style="display: block; background-color:rgba(0, 0, 0, 1.00)" width="970"></canvas>
+
+</body></html>
